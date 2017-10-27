@@ -1,4 +1,4 @@
-﻿/* Data */
+/* Data */
 
 var all_places = [
     {
@@ -28,6 +28,20 @@ var all_channels = [
 		{name: 'CCTV-14', uri: '/lvds/live/cctv-14/live.m3u8'},
 		{name: 'CCTV-15', uri: '/lvds/live/cctv-15/live.m3u8'},
 		{name: 'CCTV-5+', uri: '/lvds/live/cctv5p/live.m3u8'},
+		{name: '安徽卫视', uri: '/lvds/live/ahws/live.m3u8'},
+		{name: '北京卫视', uri: '/lvds/live/bjws/live.m3u8'},
+		{name: '重庆卫视', uri: '/lvds/live/cqws/live.m3u8'},
+		{name: '东方卫视', uri: '/lvds/live/dfws/live.m3u8'},
+		{name: '东南卫视', uri: '/lvds/live/dnws/live.m3u8'},
+		{name: '广东卫视', uri: '/lvds/live/gdws/live.m3u8'},
+		{name: '湖北卫视', uri: '/lvds/live/hubws/live.m3u8'},
+		{name: '湖南卫视', uri: '/lvds/live/hunws/live.m3u8'},
+		{name: '江苏卫视', uri: '/lvds/live/jsws/live.m3u8'},
+		{name: '江西卫视', uri: '/lvds/live/jxws/live.m3u8'},
+		{name: '四川卫视', uri: '/lvds/live/scws/live.m3u8'},
+		{name: '山东卫视', uri: '/lvds/live/sdws/live.m3u8'},
+		{name: '深圳卫视', uri: '/lvds/live/szws/live.m3u8'},
+		{name: '浙江卫视', uri: '/lvds/live/zjws/live.m3u8'},
     ]
     },
 ];
