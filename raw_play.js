@@ -11,6 +11,7 @@ var hlsplayer = new Vue({
         current_server: all_places[0].servers[0],
         current_source: all_channels[0],
         current_channel: all_channels[0].channels[0],
+        secret: '',
         message: '',
         filterString: '',
     },
@@ -51,6 +52,10 @@ var hlsplayer = new Vue({
         },
     },
     methods: {
+        set_secret: function() {
+            // alert("Set Secret ?");
+            this.secret = prompt("请输入播放密钥（空则表示不用密钥）", "");
+        },
         change_place: function (place) {
             // alert(place);
             this.current_place = place;
@@ -76,6 +81,16 @@ var hlsplayer = new Vue({
                 var that = this;
                 var full_url = '../../hlsplayer/' + this.current_server.host + '/' + this.current_server.port + this.current_channel.uri;
                 console.log('Full URL:' + full_url);
+                if (this.secret) {
+                    var t = parseInt((new Date().getTime() / 1000 + 3600)).toString();
+                    var hash = CryptoJS.MD5(t+this.current_channel.uri+' '+this.secret);
+                    var hs = hash.toString(CryptoJS.enc.Base64);
+                    var s = hs.replace(/=/g,"").replace(/\+/g,'-').replace(/\//g,'_');
+                    console.log("HS:>", hs);
+                    console.log("T:>", t);
+                    console.log("S:>", s);
+                    full_url += "?t="+t+"&s="+s;
+                }
                 // this.message += '\n Loading: '+full_url;
                 hls.loadSource(full_url);
                 hls.attachMedia(video);
