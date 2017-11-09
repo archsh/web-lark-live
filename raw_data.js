@@ -3,8 +3,8 @@
 var all_places = [
     {
         place: 'Default', servers: [
-        {host: '10.112.189.138', port: 5912},
-        {host: '10.112.189.131', port: 5912},
+        {host: '127.0.0.1', port: 5912},
+        {host: '127.0.0.1', port: 5913},
     ]
     },
 ];
