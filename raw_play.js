@@ -86,9 +86,9 @@ var hlsplayer = new Vue({
                     var hash = CryptoJS.MD5(t+this.current_channel.uri+' '+this.secret);
                     var hs = hash.toString(CryptoJS.enc.Base64);
                     var s = hs.replace(/=/g,"").replace(/\+/g,'-').replace(/\//g,'_');
-                    console.log("HS:>", hs);
-                    console.log("T:>", t);
-                    console.log("S:>", s);
+                    // console.log("HS:>", hs);
+                    // console.log("T:>", t);
+                    // console.log("S:>", s);
                     full_url += "?t="+t+"&s="+s;
                 }
                 // this.message += '\n Loading: '+full_url;
