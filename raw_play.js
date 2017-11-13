@@ -79,7 +79,8 @@ var hlsplayer = new Vue({
                 var video = document.getElementById('Hvideo');
                 var hls = new Hls();
                 var that = this;
-                var full_url = '../../hlsplayer/' + this.current_server.host + '/' + this.current_server.port + this.current_channel.uri;
+                //var full_url = '../../hlsplayer/' + this.current_server.host + '/' + this.current_server.port + this.current_channel.uri;
+                var full_url = this.current_channel.uri;
                 console.log('Full URL:' + full_url);
                 if (this.secret) {
                     var t = parseInt((new Date().getTime() / 1000 + 3600)).toString();
